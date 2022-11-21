@@ -1,0 +1,12 @@
+extends layout
+
+block content 
+    h1="Portal"
+    h2="Comportamiento de variables en el tiempo"
+    hr
+    form(action="/download", method="get") 
+        select(name="formato") 
+            option(value="null") ---
+            option(value="pdf") pdf
+            option(value="csv") csv
+        input(type="submit", value="Submit")

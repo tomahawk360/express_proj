@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    script.
+        function showData() {
+            const canvas = document.getElementById("canvas");
+            const newText = document.createTextNode("Este es un dato");
+
+            if(canvas.childNodes.length != 0) {
+                canvas.removeChild(canvas.childNodes[0]);
+            }
+            canvas.appendChild(newText);
+        };
+
+        function showReport() {
+            const canvas = document.getElementById("canvas");
+            const newText = document.createTextNode("Este es un Reporte");
+            
+            if(canvas.childNodes.length != 0) {
+                canvas.removeChild(canvas.childNodes[0]);
+            }
+            canvas.appendChild(newText);
+        };
+
+    h1="Portal"
+    h2="Vista Publica de datos"
+    hr
+    button(id="datos", onclick="showData()") Ver datos
+    br
+    button(id="reportes", onclick="showReport()") Ver reportes
+    br
+    div(id="canvas")
